@@ -9,13 +9,13 @@ public class test1 {
 
     public static int recursiveSeries(int a0,int[] ci,int n) {
         int an = a0;
-        if(n==1) {
+        if(n<=1) {
             an = ci[0]*a0;
             return an;
         }
-        for (int i=0;i<n;i++) {
-            an = recursiveSeries(a0, ci, n - 2) + ci[n-1]*recursiveSeries(a0, ci, n - 1);
-        }
+//        for (int i=0;i<n;i++) {
+//        }
+        an = recursiveSeries(a0, ci, n - 2) + ci[n-1]*recursiveSeries(a0, ci, n - 1);
         return an;
     }
 
